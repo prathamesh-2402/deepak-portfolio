@@ -73,7 +73,7 @@ const Service = ({ serviceData }) => {
           <h1>{serviceData?.location}</h1>
         </div>
         <div className="flex flex-col justify-center items-center text-center gap-7">
-          <h1 className="text-[96px] w-[90%] leading-[90px]">
+          <h1 className="text-[65px] md:text-[72px] lg:text-[78px] xl:text-[82px] 2xl:text-[86px] w-[90%] leading-[90px]">
             {serviceData?.title}
           </h1>
           <button className="px-3 py-1 border rounded-3xl text-sm text-[#1c4571] dark:text-gray-50 border-[#1c4571] hover:bg-[#1c457110] dark:border-gray-50 dark:hover:bg-[#f9fafb10] transition-all duration-300">

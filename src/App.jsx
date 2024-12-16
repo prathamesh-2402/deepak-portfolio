@@ -7,37 +7,19 @@ import CompanyDetails from './components/Home/CompanyDetails';
 import Service from './components/Home/Service';
 import Footer from './components/Home/Footer';
 
+import { homeServiceData1, homeServiceData2 } from './utils/data';
+
 const App = () => {
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
     let savedMode = localStorage.getItem('darkMode');
     if (!savedMode) {
-      savedMode = "light";
-      setDarkMode(false);
+      savedMode = "dark";
+      setDarkMode(true);
       localStorage.setItem("displayMode", savedMode);
     }
   }, []);
-
-  const serviceData1 = {
-    id: 1,
-    title: "Digital Marketing",
-    // description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, doloribus.",
-    image: "https://images.pexels.com/photos/2097103/pexels-photo-2097103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    image2: "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    date: "March 2023",
-    location: "New York, USA",
-  }
-
-  const serviceData2 = {
-    id: 2,
-    title: "Film Making",
-    // description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, doloribus.",
-    image: "https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    image2: "https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=600",
-    date: "Dec 2024",
-    location: "Switzerland",
-  }
 
   return (
     <div className={`${darkMode ? "dark " : ""}w-full  transition-all duration-500 smooth-wrapper`}>
@@ -48,9 +30,8 @@ const App = () => {
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <HeroSection/>
         <CompanyDetails/>
-        <Service serviceData={serviceData1}/>
-        <Service serviceData={serviceData2}/>
-        <HeroSection/>
+        <Service serviceData={homeServiceData1}/>
+        <Service serviceData={homeServiceData2}/>
 
         <HeroSection/>
 

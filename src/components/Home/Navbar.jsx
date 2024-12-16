@@ -7,8 +7,8 @@ function Navbar({ darkMode, setDarkMode }) {
         setDarkMode: PropTypes.func.isRequired
     }
     return (
-        <div className="sticky top-0 flex justify-between items-center w-full px-10 py-4 z-10 bg-transparent backdrop-blur-2xl">
-            <div className="flex items-center gap-2">
+        <div className="sticky top-0 flex justify-between items-center w-full px-10 py-4 z-10 bg-[#e6e3ee98] dark:bg-[#0e101230] backdrop-blur-2xl">
+            <div className="hidden md:flex items-center gap-2">
                 <button className="px-3 py-1 border rounded-3xl text-[#1c4571] dark:text-gray-50 border-[#1c4571] hover:bg-[#1c457110] dark:border-gray-50 dark:hover:bg-[#f9fafb10] transition-all duration-300">
                     Film Making
                 </button>
@@ -17,7 +17,7 @@ function Navbar({ darkMode, setDarkMode }) {
                 </button>
             </div>
             <div className="text-2xl text-[#1c4571] dark:text-gray-50">Portfolio</div>
-            <div className="flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-2">
                 <button className="px-3 py-1 border rounded-3xl text-[#1c4571] dark:text-gray-50 border-[#1c4571] hover:bg-[#1c457110] dark:border-gray-50 dark:hover:bg-[#f9fafb10] transition-all duration-300">
                     Instagram
                 </button>
@@ -29,6 +29,17 @@ function Navbar({ darkMode, setDarkMode }) {
                     onClick={() => setDarkMode(!darkMode)}
                 >
                     {darkMode ? "Light" : "Dark"}
+                </button>
+            </div>
+            <div className="flex md:hidden items-center gap-2">
+                <button
+                    className="px-3 py-1 border rounded-3xl text-[#1c4571] dark:text-gray-50 border-[#1c4571] hover:bg-[#1c457110] dark:border-gray-50 dark:hover:bg-[#f9fafb10] transition-all duration-300"
+                    onClick={() => setDarkMode(!darkMode)}
+                >
+                    {darkMode ? "Light" : "Dark"}
+                </button>
+                <button className="px-3 py-1 border rounded-3xl text-[#1c4571] dark:text-gray-50 border-[#1c4571] hover:bg-[#1c457110] dark:border-gray-50 dark:hover:bg-[#f9fafb10] transition-all duration-300">
+                    Menu
                 </button>
             </div>
         </div>
