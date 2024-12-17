@@ -16,4 +16,15 @@ const homeServiceData2 = {
     location: "Switzerland",
 }
 
-export { homeServiceData1, homeServiceData2 }
+const companyLogos = [
+    'pfizer',
+    'social-alpha',
+    'bloom',
+    'sleepy-owl',
+    'apca',
+    'gc',
+    'kukufm',
+    'guru'
+]
+
+export { homeServiceData1, homeServiceData2, companyLogos }

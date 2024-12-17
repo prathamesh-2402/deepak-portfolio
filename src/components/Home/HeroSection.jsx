@@ -28,14 +28,14 @@ const HeroSection = () => {
         >
             <video
                 ref={video}
-                className="w-[85%] md:w-[92%] h-[700px] md:h-[840px] object-cover rounded-3xl"
-                onContextMenu={() => {
-                    return false;
+                className="w-[92%] h-[700px] md:h-[840px] object-cover rounded-3xl"
+                onContextMenu={(e) => {
+                    e.preventDefault();
                 }}
                 autoPlay={true}
                 loop={true}
-                playsInline
                 muted={true}
+                playsInline
             >
                 <source src="https://videos.pexels.com/video-files/5155396/5155396-uhd_2560_1440_30fps.mp4" />
             </video>

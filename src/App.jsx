@@ -8,6 +8,7 @@ import Service from './components/Home/Service';
 import Footer from './components/Home/Footer';
 
 import { homeServiceData1, homeServiceData2 } from './utils/data';
+import Companylogos from './components/Home/Companylogos';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false)
@@ -26,14 +27,14 @@ const App = () => {
       <div className='grain'>
         <div className='grain-texture'></div>
       </div>
-      <div className='flex flex-col items-center h-full w-full bg-[#e6e3ee] dark:bg-[#0e1012] dark:text-white transition-all duration-500 smooth-content'>
+      <div className='flex flex-col items-center h-full w-full bg-light-background text-light-foreground dark:bg-dark-background dark:text-dark-foreground transition-all duration-500 smooth-content'>
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <HeroSection/>
         <CompanyDetails/>
         <Service serviceData={homeServiceData1}/>
         <Service serviceData={homeServiceData2}/>
 
-        <HeroSection/>
+        <Companylogos darkMode={darkMode}/>
 
         <Footer/>
       </div>

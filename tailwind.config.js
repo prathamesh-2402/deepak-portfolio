@@ -6,6 +6,23 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        'light-background': '#e6e3ee',
+        'light-foreground': '#1c4571',
+        'light-hover-background': '#1c457110',
+        'light-black': '#000000',
+        'light-navbar': '#e6e3ee98',
+
+        'dark-background': '#0e1012',
+        'dark-foreground': '#f3f6fa',
+        'dark-hover-background': '#f9fafb10',
+        'dark-white': '#ffffff',
+        'dark-navbar': '#0e101230',
+      },
+      fontFamily: {
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
       keyframes: {
         wave: {
           '0%, 100%': {
