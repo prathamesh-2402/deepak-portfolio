@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import { companyLogos } from "../../utils/data";
 import { useState } from "react";
 
-const Companylogos = ({ darkMode }) => {
-  Companylogos.propTypes = {
+const CompanyLogos = ({ darkMode }) => {
+  CompanyLogos.propTypes = {
     darkMode: PropTypes.bool.isRequired,
   };
 
@@ -63,4 +63,4 @@ const Companylogos = ({ darkMode }) => {
   );
 };
 
-export default Companylogos;
+export default CompanyLogos;
