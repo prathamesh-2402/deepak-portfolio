@@ -6,9 +6,9 @@ import HeroSection from './components/Home/HeroSection';
 import CompanyDetails from './components/Home/CompanyDetails';
 import Service from './components/Home/Service';
 import Footer from './components/Home/Footer';
+import CompanyLogos from './components/Home/CompanyLogos';
 
 import { homeServiceData1, homeServiceData2 } from './utils/data';
-import Companylogos from './components/Home/Companylogos';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false)
@@ -34,7 +34,7 @@ const App = () => {
         <Service serviceData={homeServiceData1}/>
         <Service serviceData={homeServiceData2}/>
 
-        <Companylogos darkMode={darkMode}/>
+        <CompanyLogos darkMode={darkMode}/>
 
         <Footer/>
       </div>
