@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react'
-
-import './App.css'
+import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Home/Navbar';
-import HeroSection from './components/Home/HeroSection';
-import CompanyDetails from './components/Home/CompanyDetails';
-import Service from './components/Home/Service';
+import Home from './pages/Home';
+import FilmMaking from './pages/FilmMaking';
+import DigitalMarketing from './pages/DigitalMarketing';
+import ContactUs from './pages/ContactUs';
+import AboutUs from './pages/AboutUs';
+import './App.css'
 import Footer from './components/Home/Footer';
-import CompanyLogos from './components/Home/CompanyLogos';
-
-import { homeServiceData1, homeServiceData2 } from './utils/data';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false)
@@ -29,14 +28,14 @@ const App = () => {
       </div>
       <div className='flex flex-col items-center h-full w-full bg-light-background text-light-foreground dark:bg-dark-background dark:text-dark-foreground transition-all duration-500 smooth-content'>
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <HeroSection/>
-        <CompanyDetails/>
-        <Service serviceData={homeServiceData1}/>
-        <Service serviceData={homeServiceData2}/>
-
-        <CompanyLogos darkMode={darkMode}/>
-
-        <Footer/>
+        <Routes>
+          <Route path="/" element={<Home darkMode={darkMode} />} />
+          <Route path="/film-making" element={<FilmMaking />} />
+          <Route path="/digital-marketing" element={<DigitalMarketing />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs darkMode={darkMode} />} />
+        </Routes>
+        <Footer />
       </div>
     </div>
   )
