@@ -45,11 +45,11 @@ const ContactUs = ({ darkMode }) => {
             style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}
           ></div>
         </div>
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl text-center flex flex-col items-center">
           <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
             Drop Us a Line
           </h2>
-          <p className="mt-2 text-lg/8">
+          <p className="mt-2 text-lg/8 sm:w-[80%]">
             We&apos;d love to hear from you. So feel free to use the online form and we&apos;ll get back to you soon.
           </p>
         </div>
@@ -59,6 +59,42 @@ const ContactUs = ({ darkMode }) => {
           className="mx-auto mt-16 max-w-xl sm:mt-20"
         >
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div className="sm:col-span-2">
+              <h1
+                className="block text-sm/6 font-semibold mb-4"
+              >
+                Services you&apos;re interested in
+              </h1>
+              <div className="grid grid-cols-3 gap-2">
+                <div className="flex items-center gap-2 h-14 bg-light-hover-background dark:bg-dark-hover-background py-2 px-4 rounded-sm">
+                  <input type="checkbox" name="checkbox1" id="checkbox1" className="w-4 h-4 border border-light-foreground dark:border-dark-foreground" />
+                  <label
+                    htmlFor="checkbox1"
+                    className="text-sm/6 font-semibold"
+                  >
+                    REELS
+                  </label>
+                </div>
+                <div className="flex items-center gap-2 h-14 bg-light-hover-background dark:bg-dark-hover-background p-2 px-4 rounded-sm">
+                  <input type="checkbox" name="checkbox2" id="checkbox2" className="w-4 h-4 border border-light-foreground dark:border-dark-foreground" />
+                  <label
+                    htmlFor="checkbox2"
+                    className="text-sm/6 font-semibold"
+                  >
+                    REELS
+                  </label>
+                </div>
+                <div className="flex items-center gap-2 h-14 bg-light-hover-background dark:bg-dark-hover-background p-2 px-4 rounded-sm">
+                  <input type="checkbox" name="checkbox3" id="checkbox3" className="w-4 h-4 border border-light-foreground dark:border-dark-foreground" />
+                  <label
+                    htmlFor="checkbox3"
+                    className="text-sm/6 font-semibold"
+                  >
+                    REELS
+                  </label>
+                </div>
+              </div>
+            </div>
             <div>
               <label
                 htmlFor="first-name"
@@ -136,7 +172,7 @@ const ContactUs = ({ darkMode }) => {
                 </div>
               </div>
             </div>
-            <div className="sm:col-span-2">
+            {/* <div className="sm:col-span-2">
               <label
                 htmlFor="message"
                 className="block text-sm/6 font-semibold"
@@ -165,7 +201,7 @@ const ContactUs = ({ darkMode }) => {
                   <option>Editing and Color Grading</option>
                 </select>
               </div>
-            </div>
+            </div> */}
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
