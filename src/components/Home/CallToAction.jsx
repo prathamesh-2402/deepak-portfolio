@@ -27,11 +27,11 @@ const CallToAction = () => {
                     </div>
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full z-20 mt-[50px] lg:mt-[100px]'>
-                    <div className="flex flex-col items-center justify-center gap-4 text-white text-center p-4 w-full h-full bg-[url('/assets/phoenix/image.webp')] bg-no-repeat bg-center bg-cover">
-                        <h1 className="text-2xl">
+                    <div className="flex flex-col items-center justify-evenly gap-4 text-white text-center p-4 w-full h-full bg-[url('/assets/phoenix/image.webp')] bg-no-repeat bg-center bg-cover">
+                        <h1 className="text-3xl lg:text-4xl w-[80%] md:w-[70%]">
                             &quot;Let your vision rise with us, just as a phoenix does from it&apos;s ashes!&quot;
                         </h1>
-                        <h1 className="">
+                        <h1 className="text-xl">
                             START A PARTNERSHIP
                         </h1>
                     </div>

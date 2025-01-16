@@ -22,7 +22,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className={`${darkMode ? "dark " : ""}w-full  transition-all duration-500 smooth-wrapper`}>
+    <div className={`${darkMode ? "dark " : ""}w-full overflow-hidden transition-all duration-500 smooth-wrapper`}>
       <div className='grain'>
         <div className='grain-texture'></div>
       </div>
