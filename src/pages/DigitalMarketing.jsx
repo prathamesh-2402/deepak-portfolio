@@ -1,8 +1,10 @@
-import React from 'react'
+import BentoGrid from '../components/DigitalMarketing/BentoGrid'
 
 const DigitalMarketing = () => {
   return (
-    <div>DigitalMarketing</div>
+    <div>
+      <BentoGrid />
+    </div>
   )
 }
 

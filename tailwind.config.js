@@ -23,6 +23,12 @@ export default {
         sans: ['Graphik', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
       },
+      dropShadow: {
+        glow: [
+          "0 0px 20px rgba(255,255, 255, 55)",
+          "0 0px 65px rgba(255, 255,255, 4)"
+        ]
+      },
       keyframes: {
         wave: {
           '0%, 100%': {

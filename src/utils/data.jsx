@@ -46,4 +46,6 @@ const filmMakingDropdown = ['CORPORATE VIDEOS', 'COMMERCIAL', 'DOCUMENTARY', 'SH
 
 const digitalMarketingDropdown = ['REELS', 'SMM', 'SEO', 'WEBSITE UI/UX AND DEVELOPMENT'];
 
-export { homeServiceData1, homeServiceData2, companyLogos, aboutUs, filmMakingDropdown, digitalMarketingDropdown };
+const allServices = [...filmMakingDropdown, ...digitalMarketingDropdown];
+
+export { homeServiceData1, homeServiceData2, companyLogos, aboutUs, filmMakingDropdown, digitalMarketingDropdown, allServices };

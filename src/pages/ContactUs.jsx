@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import FormField from "../components/ContactUs/FormField";
+import Checkbox from "../components/ContactUs/Checkbox";
+import { allServices } from "../utils/data";
 
 
 const ContactUs = ({ darkMode }) => {
@@ -56,7 +59,7 @@ const ContactUs = ({ darkMode }) => {
         <form
           action="#"
           method="POST"
-          className="mx-auto mt-16 max-w-xl sm:mt-20"
+          className="mx-auto mt-16  sm:mt-20"
         >
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div className="sm:col-span-2">
@@ -65,37 +68,24 @@ const ContactUs = ({ darkMode }) => {
               >
                 Services you&apos;re interested in
               </h1>
-              <div className="grid grid-cols-3 gap-2">
-                <div className="flex items-center gap-2 h-14 bg-light-hover-background dark:bg-dark-hover-background py-2 px-4 rounded-sm">
-                  <input type="checkbox" name="checkbox1" id="checkbox1" className="w-4 h-4 border border-light-foreground dark:border-dark-foreground" />
-                  <label
-                    htmlFor="checkbox1"
-                    className="text-sm/6 font-semibold"
-                  >
-                    REELS
-                  </label>
-                </div>
-                <div className="flex items-center gap-2 h-14 bg-light-hover-background dark:bg-dark-hover-background p-2 px-4 rounded-sm">
-                  <input type="checkbox" name="checkbox2" id="checkbox2" className="w-4 h-4 border border-light-foreground dark:border-dark-foreground" />
-                  <label
-                    htmlFor="checkbox2"
-                    className="text-sm/6 font-semibold"
-                  >
-                    REELS
-                  </label>
-                </div>
-                <div className="flex items-center gap-2 h-14 bg-light-hover-background dark:bg-dark-hover-background p-2 px-4 rounded-sm">
-                  <input type="checkbox" name="checkbox3" id="checkbox3" className="w-4 h-4 border border-light-foreground dark:border-dark-foreground" />
-                  <label
-                    htmlFor="checkbox3"
-                    className="text-sm/6 font-semibold"
-                  >
-                    REELS
-                  </label>
-                </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                {
+                  allServices.map((item, index) => (
+                    <div className="relative flex items-center gap-2 h-24 bg-light-hover-background dark:bg-dark-hover-background py-2 px-4 rounded-xl transition ease-in-out duration-300"
+                      key={index}
+                      onMouseMove={(e) => handleMouseMove(e, index)}
+                      onMouseLeave={() => handleMouseLeave(index)}>
+                      <div
+                        className="absolute inset-0 rounded-xl pointer-events-none transition-opacity ease-in-out duration-300"
+                        style={glowStyles[index] || {}}
+                      ></div>
+                      <Checkbox label={item} id={item.toLowerCase().replace(/\s+/g, "-")} />
+                    </div>
+                  ))
+                }
               </div>
             </div>
-            <div>
+            {/* <div>
               <label
                 htmlFor="first-name"
                 className="block text-sm/6 font-semibold"
@@ -111,7 +101,8 @@ const ContactUs = ({ darkMode }) => {
                   className="block w-full rounded-md bg-light-background dark:bg-dark-background px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-light-foreground dark:outline-dark-foreground placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-light-foreground"
                 />
               </div>
-            </div>
+            </div> */}
+            <FormField id={"first-name"} label={"First name"} type={"text"} autoComplete={"given-name"} />
             <div>
               <label
                 htmlFor="last-name"
@@ -163,45 +154,18 @@ const ContactUs = ({ darkMode }) => {
                     </div>
                   </div>
                   <input
-                    type="text"
+                    type="tel"
                     name="phone-number"
                     id="phone-number"
+                    pattern="^[0-9]{1,10}$"
+                    maxLength={10}
                     className="block min-w-0 grow bg-light-background dark:bg-dark-background rounded-r-md py-1.5 pl-1 pr-3 text-base placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
                     placeholder="12345 67890"
+                    onInput={(e) => e.target.value = e.target.value.replace(/\D/g, '')}
                   />
                 </div>
               </div>
             </div>
-            {/* <div className="sm:col-span-2">
-              <label
-                htmlFor="message"
-                className="block text-sm/6 font-semibold"
-              >
-                Select your Service
-              </label>
-              <div className="mt-2.5">
-                <select
-                  id="services"
-                  autoComplete="services"
-                  aria-label="Services"
-                  name="services"
-                  className="block w-full rounded-md bg-light-background dark:bg-dark-background pl-3 pr-7 py-2 text-base outline outline-1 -outline-offset-1 outline-light-foreground dark:outline-dark-foreground placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-light-foreground border-r-[16px] border-transparent"
-                >
-                  <option>REELS</option>
-                  <option>SMM</option>
-                  <option>SEO</option>
-                  <option>WEBSITE</option>
-                  <option>UI/UX</option>
-                  <option>DEVELOPMENT</option>
-                  <option>Corporate Videos</option>
-                  <option>Commercial</option>
-                  <option>Documentary</option>
-                  <option>Short Films</option>
-                  <option>Music Videos</option>
-                  <option>Editing and Color Grading</option>
-                </select>
-              </div>
-            </div> */}
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
@@ -233,7 +197,7 @@ const ContactUs = ({ darkMode }) => {
       </div>
       <div>
         <div className="mx-auto max-w-2xl text-center mb-[100px]">
-          <p className="mt-2 text-lg/8">
+          <p className="mt-2 text-lg/8 px-2">
             We are currently taking on new projects.
             Would you like to discuss yours?
           </p>
@@ -246,7 +210,6 @@ const ContactUs = ({ darkMode }) => {
         </div>
       </div>
     </div>
-
   );
 };
 

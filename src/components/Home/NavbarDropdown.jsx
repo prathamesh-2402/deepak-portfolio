@@ -23,25 +23,25 @@ const NavbarDropdown = ({ menu, dropdownVisible, setDropdownVisible }) => {
     menu === "film-making" ? filmMakingDropdown : digitalMarketingDropdown;
 
   return (
-    <div className={`${dropdownVisible ? "absolute" : "hidden"} left-1/2 z-10 mt-2 flex w-screen max-w-max -translate-x-1/2 px-4 transition-all duration-500`}
+    <div className={`${dropdownVisible ? "absolute" : "hidden"} left-16 z-10 mt-2 flex w-screen max-w-max -translate-x-1/2 px-4 transition-all duration-500`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div className="flex-auto overflow-hidden rounded-3xl text-light-foreground dark:text-dark-foreground bg-dark-white dark:bg-light-black text-sm/6 shadow-lg ring-1 ring-gray-900/5">
         <div className="p-4">
           <div className="group relative flex flex-col gap-2 rounded-lg">
-          {dropdownData.map((item, index) => (
-              <div
+            {dropdownData.map((item, index) => (
+              <Link
+                to={`/${menu}/${item.toLowerCase().split(' ')[0]}`}
                 key={index}
                 className="hover:bg-light-hover-background dark:hover:bg-dark-hover-background p-4 rounded-2xl"
               >
-                <Link
-                  to={`/${menu}`}
+                <h1
                   className="font-semibold"
                 >
                   {item}
-                </Link>
-              </div>
+                </h1>
+              </Link>
             ))}
           </div>
         </div>
