@@ -2,6 +2,8 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 gsap.registerPlugin(useGSAP);
 
@@ -22,23 +24,80 @@ const HeroSection = () => {
     );
 
     return (
-        <div
-            className="max-h-[840px] w-full flex justify-center py-2 mb-[100px]"
-            ref={container}
-        >
-            <video
+        <div ref={container}>
+
+            <div
+                className="max-h-[840px] w-full min-h-[700px] flex justify-center py-2 mb-[100px]"
                 ref={video}
-                className="w-[92%] h-[700px] md:h-[840px] object-cover rounded-3xl"
-                onContextMenu={(e) => {
-                    e.preventDefault();
-                }}
-                autoPlay={true}
-                loop={true}
-                muted={true}
-                playsInline
             >
-                <source src="https://videos.pexels.com/video-files/5155396/5155396-uhd_2560_1440_30fps.mp4" />
-            </video>
+                <Carousel
+                    additionalTransfrom={0}
+                    arrows
+                    centerMode={false}
+                    className="h-full w-[98%]"
+                    showDots={false}
+                    draggable
+                    focusOnSelect={false}
+                    infinite
+                    keyBoardControl
+                    minimumTouchDrag={80}
+                    renderArrowsWhenDisabled={false}
+                    renderButtonGroupOutside={false}
+                    responsive={{
+                        desktop: {
+                            breakpoint: {
+                                max: 3000,
+                                min: 1024
+                            },
+                            items: 1,
+                            partialVisibilityGutter: 40
+                        },
+                        mobile: {
+                            breakpoint: {
+                                max: 464,
+                                min: 0
+                            },
+                            items: 1,
+                            partialVisibilityGutter: 30
+                        },
+                        tablet: {
+                            breakpoint: {
+                                max: 1024,
+                                min: 464
+                            },
+                            items: 1,
+                            partialVisibilityGutter: 30
+                        }
+                    }}
+                >
+
+                    <video
+                        className="h-[700px] md:h-[840px] w-full object-cover rounded-3xl"
+                        onContextMenu={(e) => {
+                            e.preventDefault();
+                        }}
+                        autoPlay={true}
+                        loop={true}
+                        muted={true}
+                        playsInline
+                    >
+                        <source src="/assets/home/Trailer1.mp4" />
+                    </video>
+
+                    <video
+                        className="h-[700px] md:h-[840px] w-full object-cover rounded-3xl"
+                        onContextMenu={(e) => {
+                            e.preventDefault();
+                        }}
+                        autoPlay={true}
+                        loop={true}
+                        muted={true}
+                        playsInline
+                    >
+                        <source src="/assets/home/Trailer2.mp4" />
+                    </video>
+                </Carousel>
+            </div>
         </div>
     );
 };

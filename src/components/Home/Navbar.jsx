@@ -35,18 +35,15 @@ function Navbar({ darkMode, setDarkMode }) {
       });
 
       if (isOpen) {
-        // Reset initial position and make visible
         gsap.set(menu.current, {
           display: "block",
           y: "-120%"
         });
         
-        // Animate down
         tl.to(menu.current, {
           y: "0%"
         });
       } else {
-        // If it's currently displayed, animate up then hide
         if (menu.current.style.display !== "none") {
           tl.to(menu.current, {
             y: "-120%",
@@ -120,7 +117,7 @@ function Navbar({ darkMode, setDarkMode }) {
         </div>
       </div>
       <div className="h-[50px] w-auto">
-        <img src="./logoNameCropped.webp" className="w-full h-full object-cover" alt="Logo" />
+        <img src="/logoNameCropped.webp" className="w-full h-full object-cover" alt="Logo" />
       </div>
       <div className="hidden lg:flex items-center gap-2">
         <Link

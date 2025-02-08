@@ -9,6 +9,7 @@ import './App.css'
 import Footer from './components/Home/Footer';
 import FilmMaking from './pages/FilmMaking/FilmMaking';
 import CaseStudy from './pages/FilmMaking/CaseStudy';
+import Commercial from './pages/FilmMaking/Commercial';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false)
@@ -36,10 +37,10 @@ const App = () => {
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
-          <Route path="/film-making" element={<FilmMaking />} />
-          {/* <Route path="/film-making/corporate-videos" element={<CorporateVideos />} />
+          <Route path="/film-making" element={<FilmMaking darkMode={darkMode} />} />
+          {/* <Route path="/film-making/corporate-videos" element={<CorporateVideos />} /> */}
         <Route path="/film-making/commercial" element={<Commercial />} />
-        <Route path="/film-making/documentary" element={<Documentary />} />
+        {/* <Route path="/film-making/documentary" element={<Documentary />} />
         <Route path="/film-making/short-film" element={<ShortFilm />} />
         <Route path="/film-making/music-video" element={<MusicVideo />} />
         <Route path="/film-making/editing-and-color-grading" element={<EditingColorGrading />} /> */}

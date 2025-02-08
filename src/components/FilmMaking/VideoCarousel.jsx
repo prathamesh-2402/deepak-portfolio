@@ -1,34 +1,34 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Carousel from "react-multi-carousel";
+import 'react-multi-carousel/lib/styles.css';
 
 const VideoCarousel = ({ darkMode }) => {
   VideoCarousel.propTypes = {
     darkMode: PropTypes.bool.isRequired,
   };
 
-  const carouselRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Auto-scroll functionality
-  // useEffect(() => {
-  //   const carousel = carouselRef.current;
-  //   if (!carousel) return;
-
-  //   const totalScrollWidth = carousel.scrollWidth / 2; // Adjust for the duplicated videos
-  //   let scrollAmount = 0;
-
-  //   const scroll = () => {
-  //     scrollAmount += 1; // Adjust speed here (1px per interval)
-  //     if (scrollAmount >= totalScrollWidth) {
-  //       scrollAmount = 0; // Reset when half scrolled
-  //     }
-  //     carousel.scrollLeft = scrollAmount;
-  //   };
-
-  //   const interval = setInterval(scroll, 16); // Approx. 60 FPS
-  //   return () => clearInterval(interval); // Cleanup on unmount
-  // }, []);
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 3000, min: 1268 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 1268, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   const videos = [
     // "./assets/filmmaking/Lisen.mov",
@@ -38,24 +38,35 @@ const VideoCarousel = ({ darkMode }) => {
     "./assets/film-making/commercial/video4.mp4",
   ];
 
-  // const navLink = (src) =>  {
-  //   switch (src) {
-  //     case flimmaking
-
-  //       break;
-
-  //     default:
-  //       break;
-  //   }
-  // }
+  // const extendedVideos = [...videos, ...videos];
 
   return (
-    <div className="relative w-full h-[450px] whitespace-nowrap scroll-smooth">
-      <div
-        ref={carouselRef}
-        className="flex gap-2 overflow-auto flex-nowrap"
-        style={{ scrollBehavior: "smooth" }}
+    <div className="relative w-full h-[450px]">
+      <Carousel
+        additionalTransfrom={0}
+        arrows={false}
+        autoPlay
+        autoPlaySpeed={1}
+        centerMode={true}
+        responsive={responsive}
+        showDots={false}
+        focusOnSelect={false}
+        infinite
+        rewind={true}
+        rewindWithAnimation={false}
+        rtl={false}
+        shouldResetAutoplay={false}
+        renderArrowsWhenDisabled={false}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        className="h-full w-full"
+        sliderClass="h-full w-full"
+        itemClass="w-full"
+        customTransition="transform 8000ms linear"
+        transitionDuration={8000}
+        slidesToSlide={1}
       >
+
         {videos.map((src, index) => {
           const path = "./assets/film-making/commercial/video1.mp4";
           const parts = path.split("/");
@@ -65,7 +76,7 @@ const VideoCarousel = ({ darkMode }) => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center w-[500px] h-[450px] bg-black dark:bg-black py-2 select-none"
+              className="flex flex-col items-center w-[500px] h-[450px] bg-black py-2 select-none"
             >
               <div
                 className="w-[500px] h-[450px] absolute top-0 hover:bg-[#00000099] z-10 flex justify-center items-center transition-all duration-500"
@@ -77,17 +88,14 @@ const VideoCarousel = ({ darkMode }) => {
                 }}
               >
                 <Link
-                  className={`w-[60px] h-[60px] backdrop-blur-lg flex justify-center items-center rounded-full ${
-                    isHovered && "drop-shadow-glow"
-                  } hover:cursor-pointer`}
+                  className={`w-[60px] h-[60px] backdrop-blur-lg flex justify-center items-center rounded-full ${isHovered && "drop-shadow-glow"
+                    } hover:cursor-pointer`}
                   to={`/film-making${result}`}
                 >
                   <img
                     key={index}
                     src="./play.svg"
-                    className={`w-[15px] h-[15px] ${
-                      isHovered && "drop-shadow-glow"
-                    }`}
+                    className={`w-[15px] h-[15px] ${isHovered && "drop-shadow-glow"}`}
                   />
                 </Link>
               </div>
@@ -123,7 +131,7 @@ const VideoCarousel = ({ darkMode }) => {
             </div>
           );
         })}
-      </div>
+      </Carousel>
     </div>
   );
 };

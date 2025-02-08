@@ -17,7 +17,7 @@ const Home = ({ darkMode }) => {
 
     return (
         <Scrollbar ref={scrollbar} damping={0.01}>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden w-full">
                 <HeroSection />
                 <CompanyDetails darkMode={darkMode} />
                 <Service serviceData={homeServiceData1} />
