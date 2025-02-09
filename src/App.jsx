@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Home/Navbar';
 import Home from './pages/Home';
-import DigitalMarketing from './pages/DigitalMarketing';
+import DigitalMarketing from './pages/DigitalMarketing/DigitalMarketing';
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import './App.css'
@@ -10,6 +10,7 @@ import Footer from './components/Home/Footer';
 import FilmMaking from './pages/FilmMaking/FilmMaking';
 import CaseStudy from './pages/FilmMaking/CaseStudy';
 import Commercial from './pages/FilmMaking/Commercial';
+import Reels from './pages/DigitalMarketing/Reels';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false)
@@ -48,8 +49,8 @@ const App = () => {
           <Route path="/film-making/:category/:videoId" element={<CaseStudy />} />
 
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
-          {/* <Route path="/digital-marketing/reels" element={<Reels />} />
-        <Route path="/digital-marketing/smm" element={<SMM />} />
+          <Route path="/digital-marketing/reels" element={<Reels />} />
+        {/* <Route path="/digital-marketing/smm" element={<SMM />} />
         <Route path="/digital-marketing/seo" element={<SEO />} />
         <Route path="/digital-marketing/website-development" element={<WebsiteUIUX />} /> */}
 

@@ -1,4 +1,4 @@
-import BentoGrid from '../components/DigitalMarketing/BentoGrid'
+import BentoGrid from '../../components/DigitalMarketing/BentoGrid'
 
 const DigitalMarketing = () => {
   return (
