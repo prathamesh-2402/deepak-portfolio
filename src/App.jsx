@@ -9,8 +9,19 @@ import './App.css'
 import Footer from './components/Home/Footer';
 import FilmMaking from './pages/FilmMaking/FilmMaking';
 import CaseStudy from './pages/FilmMaking/CaseStudy';
+import CorporateVideos from './pages/FilmMaking/CorporateVideos';
 import Commercial from './pages/FilmMaking/Commercial';
-import Reels from './pages/DigitalMarketing/Reels';
+import Documentary from './pages/FilmMaking/Documentary';
+import ShortFilm from './pages/FilmMaking/ShortFilm';
+import MusicVideo from './pages/FilmMaking/MusicVideo';
+import EditingColorGrading from './pages/FilmMaking/EditingColorGrading';
+import SmmServices from './pages/DigitalMarketing/SmmServices';
+import SocialMedia from './pages/DigitalMarketing/SocialMedia';
+import SeoServices from './pages/DigitalMarketing/SeoServices';
+import ContentMarketing from './pages/DigitalMarketing/ContentMarketing';
+import PpcServices from './pages/DigitalMarketing/PpcServices';
+import WebDesign from './pages/DigitalMarketing/WebDesign';
+import VideoProduction from './pages/DigitalMarketing/VideoProduction';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false)
@@ -39,22 +50,25 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route path="/film-making" element={<FilmMaking darkMode={darkMode} />} />
-          {/* <Route path="/film-making/corporate-videos" element={<CorporateVideos />} /> */}
-        <Route path="/film-making/commercial" element={<Commercial />} />
-        {/* <Route path="/film-making/documentary" element={<Documentary />} />
-        <Route path="/film-making/short-film" element={<ShortFilm />} />
-        <Route path="/film-making/music-video" element={<MusicVideo />} />
-        <Route path="/film-making/editing-and-color-grading" element={<EditingColorGrading />} /> */}
+          <Route path="/film-making/corporate-videos" element={<CorporateVideos />} />
+          <Route path="/film-making/commercial" element={<Commercial />} />
+          <Route path="/film-making/documentary" element={<Documentary />} />
+          <Route path="/film-making/short-film" element={<ShortFilm />} />
+          <Route path="/film-making/music-video" element={<MusicVideo />} />
+          <Route path="/film-making/editing-and-color-grading" element={<EditingColorGrading />} />
 
           <Route path="/film-making/:category/:videoId" element={<CaseStudy />} />
 
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
-          <Route path="/digital-marketing/reels" element={<Reels />} />
-        {/* <Route path="/digital-marketing/smm" element={<SMM />} />
-        <Route path="/digital-marketing/seo" element={<SEO />} />
-        <Route path="/digital-marketing/website-development" element={<WebsiteUIUX />} /> */}
+          <Route path="/digital-marketing/smm-services" element={<SmmServices darkMode={darkMode} />} />
+          <Route path="/digital-marketing/social-media-management" element={<SocialMedia darkMode={darkMode} />} />
+          <Route path="/digital-marketing/seo-services" element={<SeoServices darkMode={darkMode} />} />
+          <Route path="/digital-marketing/content-marketing" element={<ContentMarketing darkMode={darkMode} />} />
+          <Route path="/digital-marketing/ppc-services" element={<PpcServices darkMode={darkMode} />} />
+          <Route path="/digital-marketing/web-design-services" element={<WebDesign darkMode={darkMode} />} />
+          <Route path="/digital-marketing/video-production-&-editing" element={<VideoProduction darkMode={darkMode} />} />
 
-          <Route path="/about" element={<AboutUs />} />
+          <Route path="/about" element={<AboutUs darkMode={darkMode} />} />
           <Route path="/contact" element={<ContactUs darkMode={darkMode} />} />
         </Routes>
         <Footer />

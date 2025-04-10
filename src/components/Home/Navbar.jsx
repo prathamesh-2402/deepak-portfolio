@@ -41,7 +41,8 @@ function Navbar({ darkMode, setDarkMode }) {
         });
         
         tl.to(menu.current, {
-          y: "0%"
+          y: "0%",
+          x: 0
         });
       } else {
         if (menu.current.style.display !== "none") {
@@ -166,30 +167,35 @@ function Navbar({ darkMode, setDarkMode }) {
           <Link
             to="/"
             className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
+            onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/film-making"
             className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
+            onClick={() => setIsOpen(false)}
           >
             Film Making
           </Link>
           <Link
             to="/digital-marketing"
             className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
+            onClick={() => setIsOpen(false)}
           >
             Digital Marketing
           </Link>
           <Link
             to="/about"
             className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
+            onClick={() => setIsOpen(false)}
           >
             About us
           </Link>
           <Link
             to="/contact"
             className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
+            onClick={() => setIsOpen(false)}
           >
             Contact us
           </Link>

@@ -57,28 +57,12 @@ const Service = ({ serviceData }) => {
         ref={leftImg}
       />
       <div className="flex flex-col justify-center items-center gap-[110px]">
-        <div className="flex items-center gap-5">
-          <h1>{serviceData?.date}</h1>
-          <svg
-            width="16"
-            height="8"
-            viewBox="0 0 16 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z"
-              fill="currentcolor"
-            ></path>
-          </svg>
-          <h1>{serviceData?.location}</h1>
-        </div>
         <div className="flex flex-col justify-center items-center text-center gap-7">
           <h1 className="text-[65px] md:text-[72px] lg:text-[78px] xl:text-[82px] 2xl:text-[86px] w-[90%] leading-[90px]">
             {serviceData?.title}
           </h1>
           <Link className="px-3 py-1 border rounded-3xl text-sm text-[#1c4571] dark:text-gray-50 border-[#1c4571] hover:bg-[#1c457110] dark:border-gray-50 dark:hover:bg-[#f9fafb10] transition-all duration-300" to="film-making">
-            See Case Study
+            Visit Page
           </Link>
         </div>
         <div

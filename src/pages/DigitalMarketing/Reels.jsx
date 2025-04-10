@@ -4,13 +4,9 @@ import './reels.css'
 
 const Reels = () => {
     const reels = [
-        { id: 1, url: "/api/placeholder/600/400", title: "Reel 1" },
-        { id: 2, url: "/api/placeholder/600/400", title: "Reel 2" },
-        { id: 3, url: "/api/placeholder/600/400", title: "Reel 3" },
-        { id: 4, url: "/api/placeholder/600/400", title: "Reel 4" },
-        { id: 5, url: "/api/placeholder/600/400", title: "Reel 5" },
-        { id: 6, url: "/api/placeholder/600/400", title: "Reel 6" },
-        { id: 7, url: "/api/placeholder/600/400", title: "Reel 7" },
+        { id: 1, url: "./assets/digital-marketing/reels/APCA.mp4", title: "Reel 1" },
+        { id: 2, url: "./assets/digital-marketing/reels/BomBay_Bappa.mp4", title: "Reel 2" },
+        { id: 3, url: "./assets/digital-marketing/reels/Sleepy_Owl.mp4", title: "Reel 3" },
       ];
     
       const photos = [
@@ -48,7 +44,7 @@ const Reels = () => {
             >
               {type === 'reel' ? (
                 <video 
-                  className="w-full h-64 object-cover"
+                  className="w-full h-96 object-cover"
                   poster={item.url}
                 >
                   <source src={item.url} type="video/mp4" />
@@ -57,7 +53,7 @@ const Reels = () => {
                 <img 
                   src={item.url} 
                   alt={item.title}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-96 object-cover"
                 />
               )}
             </div>

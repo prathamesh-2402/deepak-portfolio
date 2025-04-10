@@ -32,7 +32,7 @@ const NavbarDropdown = ({ menu, dropdownVisible, setDropdownVisible }) => {
           <div className="group relative flex flex-col gap-2 rounded-lg">
             {dropdownData.map((item, index) => (
               <Link
-                to={`/${menu}/${item.toLowerCase().split(' ')[0]}`}
+                to={`/${menu}/${item.toLowerCase().replace(/ /g, '-')}`}
                 key={index}
                 className="hover:bg-light-hover-background dark:hover:bg-dark-hover-background p-4 rounded-2xl"
               >

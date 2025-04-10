@@ -42,22 +42,6 @@ const ParallaxWindow = ({ serviceData }) => {
     return (
         <div className="w-full my-[100px]">
             <div className="flex flex-col justify-center items-center gap-2 py-4">
-                <div className="flex items-center gap-5">
-                    <h1>{serviceData?.date}</h1>
-                    <svg
-                        width="16"
-                        height="8"
-                        viewBox="0 0 16 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z"
-                            fill="currentcolor"
-                        ></path>
-                    </svg>
-                    <h1>{serviceData?.location}</h1>
-                </div>
                 <h1 className="text-[60px]">{serviceData?.title}</h1>
             </div>
             <div
@@ -84,7 +68,7 @@ const ParallaxWindow = ({ serviceData }) => {
                         }}
                     >
                         {/* Main image */}
-                        <div className="absolute w-[800px] h-[500px] rounded-lg overflow-hidden">
+                        <div className="absolute w-[400px] h-[250px] lg:w-[800px] lg:h-[500px] rounded-lg overflow-hidden">
                             <Link to={`/film-making/commercial/${serviceData?.id}`} className="absolute w-[125%] h-[122%] left-[-10%] top-[-10%] z-10 hover:cursor-pointer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                                 {" "}
                                 {/* Added wrapper div */}
@@ -110,7 +94,7 @@ const ParallaxWindow = ({ serviceData }) => {
                         </div>
 
                         {/* Small images */}
-                        <div className="absolute w-[250px] h-[180px] rounded-lg overflow-hidden top-[25%] -right-[100px] z-10">
+                        <div className="absolute w-[125px] h-[90px] lg:w-[250px] lg:h-[180px] rounded-lg overflow-hidden top-[25%] -right-[100px] z-10">
                             <div className="absolute w-[122%] h-[122%] left-[-10%] top-[-10%]">
                                 <img
                                     src="https://images.pexels.com/photos/9433003/pexels-photo-9433003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -123,7 +107,7 @@ const ParallaxWindow = ({ serviceData }) => {
                             </div>
                         </div>
 
-                        <div className="absolute w-[250px] h-[180px] rounded-lg overflow-hidden -bottom-[50px] -left-[100px] z-10">
+                        <div className="absolute w-[125px] h-[90px] lg:w-[250px] lg:h-[180px] rounded-lg overflow-hidden -bottom-[50px] -left-[100px] z-10">
                             <div className="absolute w-[122%] h-[122%] left-[-10%] top-[-10%]">
                                 {" "}
                                 {/* Added wrapper div */}
@@ -138,7 +122,7 @@ const ParallaxWindow = ({ serviceData }) => {
                             </div>
                         </div>
 
-                        <div className="absolute w-[250px] h-[180px] rounded-lg overflow-hidden -top-[10%] -left-[200px]">
+                        <div className="absolute w-[125px] h-[90px] lg:w-[250px] lg:h-[180px] rounded-lg overflow-hidden -top-[10%] -left-[200px]">
                             <div className="absolute w-[122%] h-[122%] left-[-10%] top-[-10%]">
                                 {" "}
                                 {/* Added wrapper div */}

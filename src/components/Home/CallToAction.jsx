@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './styles/calltoaction.module.css';
 
 const CallToAction = () => {
@@ -31,9 +32,9 @@ const CallToAction = () => {
                         <h1 className="text-3xl lg:text-4xl w-[80%] md:w-[70%]">
                             &quot;Let your vision rise with us, just as a phoenix does from it&apos;s ashes!&quot;
                         </h1>
-                        <h1 className="text-xl">
+                        <Link to={'/contact'} className="text-xl cursor-pointer hover:underline underline-offset-4 transition-all duration-500">
                             START A PARTNERSHIP
-                        </h1>
+                        </Link>
                     </div>
                 </div>
                 <svg style={{ position: 'fixed', bottom: '0', visibility: 'hidden' }}>
