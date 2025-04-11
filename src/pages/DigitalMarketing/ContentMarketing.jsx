@@ -103,7 +103,7 @@ const ContentMarketing = ({ darkMode }) => {
     <div className="w-full">
       <HeroSection data={data} />
       <Intro data={data} />
-      <OurServices data={data} darkMode={darkMode} />
+      <OurServices data={data} darkMode={darkMode} smallIcon={true} />
       <Benefits data={data} darkMode={darkMode} />
       <WhyChoseUs data={data} />
     </div>

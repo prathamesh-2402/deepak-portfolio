@@ -17,7 +17,7 @@ const Benefits = ({ data, darkMode }) => {
       {
         data?.benefits?.benefitsList.map((item, index) => (
           <div key={index} className="flex gap-4 md:gap-10 items-start">
-            <img src={`../checkmark${darkMode ? "-dark" : "-light"}.svg`} className="w-[80px]"/>
+            <img src={`../${darkMode ? "dark" : "light"}/checkmark${darkMode ? "-dark" : "-light"}.svg`} className="w-[80px]"/>
             <div className="flex flex-col gap-2">
               <h1 className="text-xl font-bold text-left">{item.title}</h1>
               <p className="text-xl text-left max-w-[700px]">{item.desc}</p>
