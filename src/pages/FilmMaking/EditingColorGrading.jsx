@@ -26,6 +26,12 @@ const EditingColorGrading = () => {
       location: "New York, USA",
       date: "March 2023",
     },
+    {
+      id: 5,
+      title: "Lisen",
+      location: "New York, USA",
+      date: "March 2023",
+    },
   ];
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">

@@ -36,6 +36,7 @@ const VideoCarousel = ({ darkMode }) => {
     "./assets/film-making/commercial/video2.mp4",
     "./assets/film-making/commercial/video3.mp4",
     "./assets/film-making/commercial/video4.mp4",
+    "./assets/film-making/commercial/video5.mp4",
   ];
 
   // const extendedVideos = [...videos, ...videos];
