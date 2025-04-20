@@ -3,7 +3,7 @@ import styles from './styles/calltoaction.module.css';
 
 const CallToAction = () => {
     return (
-        <div className='bg-light-foreground dark:bg-dark-foreground h-[50%] px-2 lg:px-9 py-2 mt-[150px] mb-[160px] overflow-x'>
+        <div className='bg-light-foreground dark:bg-dark-foreground h-[50%] px-2 lg:px-9 py-2 mt-[150px] mb-[160px] overflow-x-hidden'>
 
             <div className="relative flex flex-col items-center justify-center w-full h-[400px] lg:h-[800px]">
                 {/* Animated Bubbles */}

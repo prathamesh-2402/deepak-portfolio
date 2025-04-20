@@ -1,5 +1,14 @@
 const homeServiceData1 = {
   id: 1,
+  title: "Film Making",
+  image:
+    "https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  image2:
+    "/assets/images/14.webp",
+};
+
+const homeServiceData2 = {
+  id: 2,
   title: "Digital Marketing",
   // image:
   //   "https://images.pexels.com/photos/2097103/pexels-photo-2097103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -9,15 +18,6 @@ const homeServiceData1 = {
   //   "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   image2:
     "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-};
-
-const homeServiceData2 = {
-  id: 2,
-  title: "Film Making",
-  image:
-    "https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  image2:
-    "/assets/images/14.webp",
 };
 
 const companyLogos = [

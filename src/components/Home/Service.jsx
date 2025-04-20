@@ -61,7 +61,7 @@ const Service = ({ serviceData }) => {
           <h1 className="text-[65px] md:text-[72px] lg:text-[78px] xl:text-[82px] 2xl:text-[86px] w-[90%] leading-[90px]">
             {serviceData?.title}
           </h1>
-          <Link className="px-3 py-1 border rounded-3xl text-sm text-[#1c4571] dark:text-gray-50 border-[#1c4571] hover:bg-[#1c457110] dark:border-gray-50 dark:hover:bg-[#f9fafb10] transition-all duration-300" to="film-making">
+          <Link className="px-3 py-1 border rounded-3xl text-sm text-[#1c4571] dark:text-gray-50 border-[#1c4571] hover:bg-[#1c457110] dark:border-gray-50 dark:hover:bg-[#f9fafb10] transition-all duration-300" to={serviceData.id === 1 ? "film-making" : "digital-marketing"}>
             Visit Page
           </Link>
         </div>

@@ -93,7 +93,7 @@ const data = {
     ],
   },
   whyUs:
-    "We know of the power of narrative. Our content marketing strategy aims to emotionally engage with your audience in addition to simply speaking to them. Before creating content that is specifically suited to your objectives, we take the time to understand the voice, values, and audience of your brand. We make sure that every piece of content, whether it be captivating social media posts or excellent films, complements your overall marketing plan. In order to help your company stand out from the competition and establish genuine connections with consumers, our team is dedicated to providing results. You get more than simply content when you work with N24 Production, you get a plan that works.",
+    "N24 Production understands the impact of social media on brand storytelling. With years of experience in digital marketing, we build innovative tactics that not only increase your brand's online visibility but also foster long-term relationships with your target audience. We are dedicated to producing measurable outcomes by focusing on what is genuinely important to your business. Our customer-centric strategy guarantees that we keep on track with your objectives and build a strong, engaging online presence that fuels growth and success",
 };
 
 const SmmServices = ({ darkMode }) => {
