@@ -5,37 +5,32 @@ const Commercial = () => {
     {
       id: 1,
       title: "Hinduja 1",
-      location: "New York, USA",
-      date: "March 2023",
+      url: "commercial",
     },
     {
       id: 2,
       title: "Hinduja 2",
-      location: "New York, USA",
-      date: "March 2023",
+      url: "commercial",
     },
     {
       id: 3,
       title: "Hinduja 3",
-      location: "New York, USA",
-      date: "March 2023",
+      url: "commercial",
     },
     {
       id: 4,
       title: "Hinduja 4",
-      location: "New York, USA",
-      date: "March 2023",
+      url: "commercial",
     },
     {
       id: 5,
       title: "Lisen",
-      location: "New York, USA",
-      date: "March 2023",
+      url: "commercial",
     },
   ];
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
-      <div className="flex flex-col justify-center items-center gap-20 px-[10%] md:text-center">
+      <div className="flex flex-col justify-center items-center gap-20 px-[10%] md:text-center mb-[100px] md:mb-0">
         <h1 className="text-[54px] sm:text-[90px] font-semibold h-[85vh] content-center">
           Commercial
         </h1>

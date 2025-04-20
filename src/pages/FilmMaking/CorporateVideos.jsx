@@ -4,38 +4,33 @@ const CorporateVideos = () => {
   const serviceData = [
     {
       id: 1,
-      title: "Hinduja 1",
-      location: "New York, USA",
-      date: "March 2023",
+      title: "BrainSight AI",
+      url: "corporate&documentary",
     },
     {
       id: 2,
-      title: "Hinduja 2",
-      location: "New York, USA",
-      date: "March 2023",
+      title: "Pfizer X Social Alfa",
+      url: "corporate&documentary",
     },
     {
       id: 3,
-      title: "Hinduja 3",
-      location: "New York, USA",
-      date: "March 2023",
+      title: "Pragmatech",
+      url: "corporate&documentary",
     },
     {
       id: 4,
-      title: "Hinduja 4",
-      location: "New York, USA",
-      date: "March 2023",
+      title: "Lactose",
+      url: "corporate&documentary",
     },
     {
       id: 5,
-      title: "Lisen",
-      location: "New York, USA",
-      date: "March 2023",
+      title: "RBS",
+      url: "corporate&documentary",
     },
   ];
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
-      <div className="flex flex-col justify-center items-center gap-20 px-[10%] md:text-center">
+      <div className="flex flex-col justify-center items-center gap-20 px-[10%] md:text-center mb-[100px] md:mb-0">
         <h1 className="text-[54px] sm:text-[90px] font-semibold h-[85vh] content-center">
           Corporate Video
         </h1>
@@ -51,7 +46,7 @@ const CorporateVideos = () => {
           video to resonate with your target audience and improve your
           company&apos;s image.
         </p>
-        <p className="text-[18px] sm:text-[24px]  ">
+        <p className="text-[18px] sm:text-[24px]">
           A well-executed corporate video is a strong tool for building brand
           credibility and increasing engagement. From training and testimonial
           videos to compelling promotional content, our production approach is

@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 
 const CaseStudy = () => {
   const { category, videoId } = useParams();
+  const [searchParams] = useSearchParams();
+  const title = searchParams.get("title");
   const videoRef = useRef(null);
   const [startVideo, setStartVideo] = useState(false);
   const [volume, setVolume] = useState(true);
@@ -48,7 +50,7 @@ const CaseStudy = () => {
               titleblur ? "blur-[6px]" : ""
             } transition-all duration-[400ms]`}
           >
-            {videoId === '5' ? "Lisen" : "Hinduja" }
+            {title}
           </h1>
           <button
             className={`flex items-center justify-end gap-2 border-[1px] border-dark-foreground px-[2px] py-[2px] pl-3 w-[90px] hover:w-[134px] backdrop-blur-xl rounded-3xl overflow-hidden transition-all duration-500`}

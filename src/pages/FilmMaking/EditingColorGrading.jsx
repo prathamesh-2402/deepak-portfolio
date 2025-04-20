@@ -35,7 +35,7 @@ const EditingColorGrading = () => {
   ];
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
-      <div className="flex flex-col justify-center items-center gap-20 px-[10%] md:text-center">
+      <div className="flex flex-col justify-center items-center gap-20 px-[10%] md:text-center mb-[100px] md:mb-0">
         <h1 className='text-[54px] sm:text-[90px] font-semibold h-[85vh] content-center'>Editing & Colour grading</h1>
         <h1 className="text-[34px] sm:text-[54px] font-semibold ">
           “Master the Art of Visual Storytelling with Colour Grading and Expert
