@@ -7,7 +7,7 @@ const CaseStudy = () => {
   const title = searchParams.get("title");
   const videoRef = useRef(null);
   const [startVideo, setStartVideo] = useState(false);
-  const [volume, setVolume] = useState(true);
+  const [volume, setVolume] = useState(false);
   const [titleblur, setTitleblur] = useState(false);
   const [beforeStyle, setBeforeStyle] = useState("-translate-y-3");
   const [afterStyle, setAfterStyle] = useState("translate-y-4");
@@ -55,7 +55,7 @@ const CaseStudy = () => {
           <button
             className={`flex items-center justify-end gap-2 border-[1px] border-dark-foreground px-[2px] py-[2px] pl-3 w-[90px] hover:w-[134px] backdrop-blur-xl rounded-3xl overflow-hidden transition-all duration-500`}
             onClick={() => {
-              setVolume(!volume);
+              setVolume(true);
               setStartVideo(true);
               videoRef.current.pause();
               videoRef.current.currentTime = 0;
@@ -73,24 +73,33 @@ const CaseStudy = () => {
         <div
           className={`absolute -bottom-6 z-10 ${visibility.bottomPlay} flex-col justify-center items-center gap-8 w-full ${afterStyle} transition-all duration-700`}
         >
-          <div className="backdrop-blur-xl p-4 lg:p-6 rounded-full cursor-pointer">
-            {volume ? (
-              <img
-                src="/play.svg"
-                className="h-4"
-                onClick={() => {
-                  setVolume(!volume);
+          <div className="backdrop-blur-xl p-4 lg:p-6 rounded-full cursor-pointer"
+              onClick={() => {
+                if (videoRef.current.paused) {
                   videoRef.current.play();
-                }}
-              />
-            ) : (
+                  setVolume(true);
+                } else {
+                  videoRef.current.pause();
+                  setVolume(false);
+                }
+              }}>
+            {volume ? (
               <img
                 src="/pause.svg"
                 className="h-4"
-                onClick={() => {
-                  setVolume(!volume);
-                  videoRef.current.pause();
-                }}
+                // onClick={() => {
+                //   setVolume(!volume);
+                //   videoRef.current.play();
+                // }}
+              />
+            ) : (
+              <img
+                src="/play.svg"
+                className="h-4"
+                // onClick={() => {
+                //   setVolume(!volume);
+                //   videoRef.current.pause();
+                // }}
               />
             )}
           </div>
@@ -100,7 +109,7 @@ const CaseStudy = () => {
           className="sm:rounded-3xl object-cover w-full"
           ref={videoRef}
           autoPlay
-          muted={volume}
+          muted={!volume}
           loop
         >
           <source

@@ -31,12 +31,6 @@ const CallToAction = () => {
               &quot;Let your vision rise with us, just as a phoenix does from
               it&apos;s ashes!&quot;
             </h1>
-            {/* <Link
-              to={"/contact"}
-              className="text-xl cursor-pointer hover:underline underline-offset-4 transition-all duration-500"
-            >
-              START A PARTNERSHIP
-            </Link> */}
             <Link
               to={"/contact"}
               className={`flex items-center justify-end gap-2 border-[1px] border-dark-foreground px-[4px] py-[2px] pl-3 w-[227px] hover:w-[305px] hover:underline underline-offset-2 backdrop-blur-xl rounded-3xl overflow-hidden transition-all duration-500`}

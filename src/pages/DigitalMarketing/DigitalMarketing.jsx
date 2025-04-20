@@ -4,9 +4,16 @@ import './reels.css'
 
 const DigitalMarketing = () => {
     const reels = [
-        { id: 1, url: "./assets/digital-marketing/reels/APCA.mp4", title: "Reel 1" },
-        { id: 2, url: "./assets/digital-marketing/reels/Bombay_Bappa.mp4", title: "Reel 2" },
-        { id: 3, url: "./assets/digital-marketing/reels/Sleepy_Owl.mp4", title: "Reel 3" },
+        { id: 1, url: "./assets/digital-marketing/reels/Bts Reel.mp4", title: "APCA" },
+        { id: 2, url: "./assets/digital-marketing/reels/Bloom.mp4", title: "Bloom" },
+        { id: 3, url: "./assets/digital-marketing/reels/Bombay_Bappa.mp4", title: "Bloom" },
+        { id: 4, url: "./assets/digital-marketing/reels/Bread Reel.mp4", title: "APCA" },
+        // { id: 5, url: "./assets/digital-marketing/reels/Bts Reel.mp4", title: "APCA" },
+        { id: 5, url: "./assets/digital-marketing/reels/Global-Cafe.mp4", title: "Global Cafe" },
+        { id: 6, url: "./assets/digital-marketing/reels/Globalcafe.mp4", title: "Global Cafe" },
+        { id: 7, url: "./assets/digital-marketing/reels/Gold Medal.mp4", title: "APCA" },
+        { id: 8, url: "./assets/digital-marketing/reels/Sleepy Owl.mp4", title: "Sleepy Owl" },
+        { id: 9, url: "./assets/digital-marketing/reels/Sugartistique.mp4", title: "APCA" },
       ];
     
       const photos = [

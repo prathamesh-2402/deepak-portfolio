@@ -81,7 +81,7 @@ const HeroSection = () => {
                         muted={true}
                         playsInline
                     >
-                        <source src="/assets/film-making/short-flim/video2.mp4" />
+                        <source src="/assets/film-making/short-film/video2.mp4" />
                     </video>
 
                     <video
@@ -94,7 +94,7 @@ const HeroSection = () => {
                         muted={true}
                         playsInline
                     >
-                        <source src="/assets/film-making/short-flim/video3.mp4" />
+                        <source src="/assets/film-making/short-film/video3.mp4" />
                     </video>
                 </Carousel>
             </div>

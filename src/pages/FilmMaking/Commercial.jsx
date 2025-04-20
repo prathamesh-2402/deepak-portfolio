@@ -27,6 +27,31 @@ const Commercial = () => {
       title: "Lisen",
       url: "commercial",
     },
+    {
+      id: 6,
+      title: "Anandrathi",
+      url: "commercial",
+    },
+    {
+      id: 7,
+      title: "Exaxro",
+      url: "commercial",
+    },
+    {
+      id: 8,
+      title: "Mattoni",
+      url: "commercial",
+    },
+    {
+      id: 9,
+      title: "Not A Doctor",
+      url: "commercial",
+    },
+    {
+      id: 10,
+      title: "Sukhi Jwellers",
+      url: "commercial",
+    },
   ];
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
