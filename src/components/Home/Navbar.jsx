@@ -210,14 +210,14 @@ function Navbar({ darkMode, setDarkMode }) {
             className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
             onClick={() => setIsOpen(false)}
           >
-            About us
+            About Me
           </Link>
           <Link
             to="/contact"
             className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
             onClick={() => setIsOpen(false)}
           >
-            Contact us
+            Contact
           </Link>
         </div>
       </div>
