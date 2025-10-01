@@ -3,17 +3,13 @@ import PropTypes from "prop-types";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
-import NavbarDropdown from "./NavbarDropdown";
-import { digitalMarketingDropdown, filmMakingDropdown } from "../../utils/data";
-import './styles/scrollbar.css';
+// import NavbarDropdown from "./NavbarDropdown";
+import "./styles/scrollbar.css";
 
 gsap.registerPlugin(useGSAP);
 
 function Navbar({ darkMode, setDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [filmMakingMenu, setFilmMakingMenu] = useState(false);
-  const [digitalMarketingMenu, setDigitalMarketingMenu] = useState(false);
   const container = useRef();
   const menu = useRef();
 
@@ -65,19 +61,12 @@ function Navbar({ darkMode, setDarkMode }) {
     { dependencies: [isOpen], scope: container }
   );
 
-  const formatToTitleCase = (str) => {
-    return str
-      .split(" ")
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(" ");
-  };
-
   return (
     <div
-      className="sticky top-0 flex justify-between items-center w-full px-10 py-4 z-50 bg-light-navbar dark:bg-dark-navbar text-light-foreground dark:text-dark-foreground backdrop-blur-2xl"
+      className="sticky top-0 flex justify-between items-center w-full px-3 md:px-10 py-4 z-50 bg-light-navbar dark:bg-dark-navbar text-light-foreground dark:text-dark-foreground backdrop-blur-2xl"
       ref={container}
     >
-      <div className="hidden lg:flex items-center gap-2">
+      {/* <div className="hidden lg:flex items-center gap-2">
         <Link
           to="/"
           className="px-3 py-1 border rounded-3xl border-light-foreground hover:bg-light-hover-background dark:border-dark-foreground dark:hover:bg-dark-hover-background transition-all duration-300"
@@ -132,43 +121,61 @@ function Navbar({ darkMode, setDarkMode }) {
             )}
           </div>
         </div>
-      </div>
-      <div className="h-[50px] w-auto">
-        <img
+      </div> */}
+      {/* <div className="h-[50px] w-auto"> */}
+      {/* <img
           src="/logoNameCropped.webp"
           className="w-full h-full object-cover"
           alt="Logo"
-        />
-      </div>
+        /> */}
+      <Link to="/" className="text-4xl font-bold font-sans mr-1">
+        Deepak Jha
+      </Link>
+      {/* </div> */}
       <div className="hidden lg:flex items-center gap-2">
         <Link
           to="/about"
           className="px-3 py-1 border rounded-3xl border-light-foreground hover:bg-light-hover-background dark:border-dark-foreground dark:hover:bg-dark-hover-background transition-all duration-300"
-          onMouseEnter={() => setActiveDropdown(null)}
         >
-          About Us
+          About Me
+        </Link>
+        <Link
+          to="/gallery"
+          className="px-3 py-1 border rounded-3xl border-light-foreground hover:bg-light-hover-background dark:border-dark-foreground dark:hover:bg-dark-hover-background transition-all duration-300"
+        >
+          Gallery
         </Link>
         <Link
           to="/contact"
           className="px-3 py-1 border rounded-3xl border-light-foreground hover:bg-light-hover-background dark:border-dark-foreground dark:hover:bg-dark-hover-background transition-all duration-300"
-          onMouseEnter={() => setActiveDropdown(null)}
         >
-          Contact Us
+          Contact
         </Link>
         <button
-          className="px-3 py-1 border rounded-3xl border-light-foreground hover:bg-light-hover-background dark:border-dark-foreground dark:hover:bg-dark-hover-background transition-all duration-300"
+          className={`${
+            darkMode ? "py-3 px-3" : "py-[9px] px-[9px]"
+          } rounded-3xl hover:bg-light-hover-background dark:hover:bg-dark-hover-background transition-all duration-300`}
           onClick={() => setDarkMode(!darkMode)}
-          onMouseEnter={() => setActiveDropdown(null)}
         >
-          {darkMode ? "Light" : "Dark"}
+          <img
+            src={`/${darkMode ? "dark" : "light"}.svg`}
+            alt="Toggle theme"
+            className={`${darkMode ? "h-[18px] w-[18px]" : "h-6 w-6"}`}
+          />
         </button>
       </div>
       <div className="flex lg:hidden items-center gap-2">
         <button
-          className="px-3 py-1 border rounded-3xl border-light-foreground hover:bg-light-hover-background dark:border-dark-foreground dark:hover:bg-dark-hover-background transition-all duration-300"
+          className={`${
+            darkMode ? "py-3 px-3" : "py-[9px] px-[9px]"
+          } rounded-3xl hover:bg-light-hover-background dark:hover:bg-dark-hover-background transition-all duration-300`}
           onClick={() => setDarkMode(!darkMode)}
         >
-          {darkMode ? "Light" : "Dark"}
+          <img
+            src={`/${darkMode ? "dark" : "light"}.svg`}
+            alt="Toggle theme"
+            className={`${darkMode ? "h-[18px] w-[18px]" : "h-6 w-6"}`}
+          />
         </button>
         <button
           className="px-3 py-1 border rounded-3xl border-light-foreground hover:bg-light-hover-background dark:border-dark-foreground dark:hover:bg-dark-hover-background transition-all duration-300"
@@ -178,7 +185,7 @@ function Navbar({ darkMode, setDarkMode }) {
         </button>
       </div>
       <div
-        className="absolute top-[80px] left-1/2 transform -translate-x-1/2 w-[90%] h-[400px] overflow-y-scroll px-2 py-6 transition z-10 bg-white dark:bg-black rounded-3xl custom-scrollbar scroll-my-4"
+        className="absolute top-[80px] left-1/2 transform -translate-x-1/2 w-[90%] h-[310px] overflow-y-scroll px-2 py-6 transition z-10 bg-white dark:bg-black rounded-3xl custom-scrollbar scroll-my-4"
         role="dialog"
         aria-modal="true"
         ref={menu}
@@ -191,96 +198,13 @@ function Navbar({ darkMode, setDarkMode }) {
           >
             Home
           </Link>
-          <div className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md">
-            <div
-              className="flex gap-2 justify-center items-baseline mb-3"
-              onClick={() => setFilmMakingMenu(!filmMakingMenu)}
-            >
-              <span>Film Making</span>
-              <img
-                src={`/${darkMode ? "dark" : "light"}/chevron-up-${
-                  darkMode ? "dark" : "light"
-                }.svg`}
-                className={`${
-                  !filmMakingMenu ? "rotate-180" : "rotate-0"
-                } w-[24px]`}
-              />
-            </div>
-          </div>
-
-          {filmMakingMenu && (
-            <>
-              <Link
-                to="/film-making"
-                onClick={() => {
-                  setIsOpen(false);
-                  filmMakingMenu(false);
-                }}
-                className="px-3 py-2 text-[30px] text-center hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
-              >
-                Visit Page
-              </Link>
-              {filmMakingDropdown.map((item, index) => (
-                <Link
-                  key={index}
-                  to={`/film-making/${item.toLowerCase().replace(/ /g, "-")}`}
-                  onClick={() => {
-                    setIsOpen(false);
-                    setFilmMakingMenu(false);
-                  }}
-                  className="px-3 py-2 text-[30px] text-center hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
-                >
-                  {formatToTitleCase(item)}
-                </Link>
-              ))}
-            </>
-          )}
-
-          <div className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md">
-            <div
-              className="flex gap-2 justify-center items-center mb-3"
-              onClick={() => setDigitalMarketingMenu(!digitalMarketingMenu)}
-            >
-              <span>Digital Marketing</span>
-              <img
-                src={`/${darkMode ? "dark" : "light"}/chevron-up-${
-                  darkMode ? "dark" : "light"
-                }.svg`}
-                className={`${
-                  !digitalMarketingMenu ? "rotate-180" : "rotate-0"
-                } w-[24px]`}
-              />
-            </div>
-          </div>
-          {digitalMarketingMenu && (
-            <>
-              <Link
-                to="/digital-marketing"
-                onClick={() => {
-                  setIsOpen(false);
-                  setDigitalMarketingMenu(false);
-                }}
-                className="px-3 py-2 text-[30px] text-center hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
-              >
-                Visit Page
-              </Link>
-              {digitalMarketingDropdown.map((item, index) => (
-                <Link
-                  key={index}
-                  to={`/digital-marketing/${item
-                    .toLowerCase()
-                    .replace(/ /g, "-")}`}
-                  onClick={() => {
-                    setIsOpen(false);
-                    setDigitalMarketingMenu(false);
-                  }}
-                  className="px-3 py-2 text-[30px] text-center hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
-                >
-                  {formatToTitleCase(item)}
-                </Link>
-              ))}
-            </>
-          )}
+          <Link
+            to="/gallery"
+            className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"
+            onClick={() => setIsOpen(false)}
+          >
+            Gallery
+          </Link>
           <Link
             to="/about"
             className="px-3 py-2 text-[33px] hover:bg-light-hover-background dark:hover:bg-dark-hover-background rounded-md"

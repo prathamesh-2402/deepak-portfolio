@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import FormField from "../components/ContactUs/FormField";
-import Checkbox from "../components/ContactUs/Checkbox";
-import { allServices } from "../utils/data";
-
 
 const ContactUs = ({ darkMode }) => {
   ContactUs.propTypes = {
@@ -50,19 +47,19 @@ const ContactUs = ({ darkMode }) => {
         </div>
         <div className="mx-auto max-w-2xl text-center flex flex-col items-center">
           <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            Drop Us a Line
+            Drop me a Line
           </h2>
           <p className="mt-2 text-lg/8 sm:w-[80%]">
-            We&apos;d love to hear from you. So feel free to use the online form and we&apos;ll get back to you soon.
+            I&apos;d love to hear from you. So feel free to use the online form and I&apos;ll get back to you soon.
           </p>
         </div>
         <form
           action="#"
           method="POST"
-          className="mx-auto mt-16  sm:mt-20"
+          className="mx-auto mt-8 sm:mt-12"
         >
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div className="sm:col-span-2">
+            {/* <div className="sm:col-span-2">
               <h1
                 className="block text-sm/6 font-semibold mb-4"
               >
@@ -84,7 +81,7 @@ const ContactUs = ({ darkMode }) => {
                   ))
                 }
               </div>
-            </div>
+            </div> */}
             {/* <div>
               <label
                 htmlFor="first-name"
@@ -198,13 +195,12 @@ const ContactUs = ({ darkMode }) => {
       <div>
         <div className="mx-auto max-w-2xl text-center mb-[100px]">
           <p className="mt-2 text-lg/8 px-2">
-            We are currently taking on new projects.
-            Would you like to discuss yours?
+            Or you could reach out to me at
           </p>
-          <a className="block text-balance text-4xl font-semibold tracking-tight sm:text-5xl my-4 group hover:text-foreground transition-all duration-150 ease-in-out" href="mailto:example@emailcom">
-            <span className="bg-left-bottom bg-gradient-to-r from-light-foreground to-light-foreground dark:from-dark-foreground dark:to-dark-foreground bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-
-              example@email.com
+          <a className="block text-balance text-3xl sm:text-5xl font-semibold tracking-tight my-4 group hover:text-foreground transition-all duration-150 ease-in-out break-all sm:break-normal" href="mailto:deepakjha3430@gmail.com">
+            <span className="bg-left-bottom bg-gradient-to-r from-light-foreground to-light-foreground dark:from-dark-foreground dark:to-dark-foreground bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out break-all sm:break-normal">
+              deepakjha3430@gmail.com
+              {/* example@email.com */}
             </span>
           </a>
         </div>

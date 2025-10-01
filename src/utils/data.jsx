@@ -1,23 +1,19 @@
 const homeServiceData1 = {
   id: 1,
-  title: "Film Making",
-  image:
-    "https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  image2:
-    "/assets/images/14.webp",
+  title: "ICN Supershow",
+  date: 'November 2024',
+  location: 'GOA',
+  image: "/assets/icn_goa/2.jpg",
+  image2: "/assets/icn_goa/1.jpg",
 };
 
 const homeServiceData2 = {
   id: 2,
-  title: "Digital Marketing",
-  // image:
-  //   "https://images.pexels.com/photos/2097103/pexels-photo-2097103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  image:
-    "https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  // image2:
-  //   "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  image2:
-    "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  title: "ICN Majestic",
+  date: 'April 2024',
+  location: 'MUMBAI',
+  image: "/assets/icn_mumbai/1.jpg",
+  image2: "/assets/icn_mumbai/2.jpg",
 };
 
 const companyLogos = [
@@ -32,107 +28,79 @@ const companyLogos = [
 ];
 
 const aboutUs = {
-  believe: [
+  accolades: [
+    {
+      icon: "checkmark",
+      label: "Certified Nutritionist",
+      desc: "Precision nutrition coaching rooted in science and natural methods.",
+    },
+    {
+      icon: "checkmark",
+      label: "Certified Trainer",
+      desc: "Strength and hypertrophy programming tailored to your physique goals.",
+    },
     {
       icon: "team",
-      label: "Our Team",
-      desc: "Passionate storytellers committed to delivering visually stunning and impactful content.",
-    },
-    {
-      icon: "process",
-      label: "Our Process",
-      desc: "A dedicated team of creators that brings your ideas to life with visuals that evoke emotions.",
-    },
-    {
-      icon: "formula",
-      label: "Our Formula",
-      desc: "A secret blend of strategies that guarantees success and fuels your creative journey.",
-    },
-  ],
-  process: [
-    {
-      icon: "discussion",
-      label: "Initial Discussion",
-      desc: "We start by understanding your objectives, market, and target audience, and then define specific project needs that correspond with your vision.",
-    },
-    {
-      icon: "research",
-      label: "Research",
-      desc: "We do in-depth competitive analysis and audience insights to identify essential components that can differentiate your brand.",
-    },
-    {
-      icon: "conceptualizing",
-      label: "Conceptualization",
-      desc: "Using our research, we create engaging ideas and deliver them to you in a well-structured video treatment plan.",
-    },
-    {
-      icon: "pre-prod",
-      label: "Pre-Production",
-      desc: "After finalizing the premise, we wrote a full script, created storyboards, set up the visual style, and planned the shoot.",
-    },
-    {
-      icon: "prod",
-      label: "Production",
-      desc: "Following the production schedule, we begin the shooting or video process, which includes location scouting, equipment setup, and everything in between.",
-    },
-    {
-      icon: "video-production",
-      label: "Post-Production",
-      desc: "Once the footage is ready, we start editing to create a cohesive video with a voiceover and share the rough cut with you for feedback. ",
-    },
-  ],
-  formula: [
-    {
-      title: "Authentic Storytelling",
-      paraOne:
-        "We focus on creating stories that truly connect with your audience, addressing their emotions and needs in innovative and engaging ways.",
-      paraTwo:
-        "Understanding the vision behind your brand and utilizing the psychology of human connection to create narratives that genuinely engage and inspire.",
-    },
-    {
-      title: "Strategic Storytelling",
-      paraOne:
-        "We immerse ourselves in studying your target audience, identifying the right tone and important moments to establish genuine connections.",
-      paraTwo:
-        "We concentrate on capturing those 'aha' moments that inspire rapid action and effortlessly guide your audience through the journey, leading to results at all stages of the marketing funnel.",
-    },
-    {
-      title: "Impactful Delivery",
-      paraOne:
-        "We ensure every project reflects our commitment to excellence by using the right equipment and an experienced, skilled team.",
-      paraTwo:
-        "With our in-house studio and post-production capabilities, we have complete creative control over every video, ensuring top-tier results at all stages.",
+      label: "100+ Transformations",
+      desc: "Proven track record mentoring athletes to sustainable, drug‑free results.",
     },
   ],
 };
 
-const filmMakingDropdown = [
-  "CORPORATE VIDEOS",
-  "COMMERCIAL",
-  "DOCUMENTARY",
-  "SHORT FILM",
-  "MUSIC VIDEO",
-  "EDITING AND COLOR GRADING",
-];
-
-const digitalMarketingDropdown = [
-  "SMM SERVICES",
-  "SOCIAL MEDIA MANAGEMENT",
-  "SEO SERVICES",
-  "CONTENT MARKETING",
-  "PPC SERVICES",
-  "WEB DESIGN SERVICES",
-  "VIDEO PRODUCTION & EDITING",
-];
-
-const allServices = [...filmMakingDropdown, ...digitalMarketingDropdown];
+const pricingPlans = {
+  tiers: [
+    {
+      id: "month-1",
+      name: "Monthly Kickstart",
+      priceText: "₹ 4999",
+      period: "1 month",
+      highlight: false,
+      cta: "Start 1 Month",
+      features: [
+        "Diet plan",
+        "Training program",
+        "Online weekly check‑ins",
+        "Quantified nutrition approach",
+        "Diet made easy (almost home food)",
+      ],
+    },
+    {
+      id: "month-3",
+      name: "Quarterly Progress",
+      priceText: "₹ 13999",
+      period: "3 months",
+      highlight: true,
+      cta: "Choose 3 Months",
+      features: [
+        "Diet plan",
+        "Training program",
+        "Online weekly check‑ins",
+        "Quantified nutrition approach",
+        "Diet made easy (almost home food)",
+      ],
+    },
+    {
+      id: "month-6",
+      name: "Half‑Year Transformation",
+      priceText: "₹ 24999",
+      period: "6 months",
+      highlight: false,
+      cta: "Commit 6 Months",
+      features: [
+        "Diet plan",
+        "Training program",
+        "Online weekly check‑ins",
+        "Quantified nutrition approach",
+        "Diet made easy (almost home food)",
+      ],
+    },
+  ],
+};
 
 export {
   homeServiceData1,
   homeServiceData2,
   companyLogos,
   aboutUs,
-  filmMakingDropdown,
-  digitalMarketingDropdown,
-  allServices,
+  pricingPlans,
 };

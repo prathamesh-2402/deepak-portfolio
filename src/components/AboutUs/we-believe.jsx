@@ -33,20 +33,21 @@ const AboutBelieve = ({ darkMode }) => {
                 height="24"
               />
             </svg>
-            <span className="relative">We</span>
+            <span className="relative">Why</span>
           </span>{" "}
-          Believe
+          Train With Me?
         </h2>
         <p className="text-base md:text-lg">
-          Video is more than just a visual experience, it’s one that touches
-          souls. We amplify this power through three core elements.
+          My coaching is natural‑first, science‑backed, and built around your life: simple training systems,
+          budget‑friendly diet plans you can actually follow, and accountability that meets you where you are.
         </p>
       </div>
       <div className="grid gap-8 row-gap-8 lg:grid-cols-3 mt-2">
-        {aboutUs.believe.map((item, index) => (
+        {aboutUs.accolades.map((item, index) => (
           <div key={index} className="text-center flex flex-col items-center gap-2">
             <div className="flex items-center justify-center w-24 h-24 mb-4 font-extrabold rounded-full text-deep-purple-accent-400 bg-indigo-50 dark:bg-dark-hover-background sm:mx-auto">
-              <img src={`../${darkMode ? "dark" : "light"}/${item.icon}${darkMode ? "-dark" : "-light"}.svg`} className={`${index === 0 ? "w-[80px]" : "w-[60px]"}`}/>
+              {/* <img src={`../${darkMode ? "dark" : "light"}/${item.icon}${darkMode ? "-dark" : "-light"}.svg`} className={`${index === 0 ? "w-[80px]" : "w-[60px]"}`}/> */}
+              <img src={`../${darkMode ? "dark" : "light"}/${item.icon}${darkMode ? "-dark" : "-light"}.svg`} className={"w-[60px]"}/>
             </div>
             <h6 className="mb-2 font-semibold text-xl leading-5">{item.label}</h6>
             <p className="max-w-md mb-3 text-sm sm:mx-auto">{item.desc}</p>

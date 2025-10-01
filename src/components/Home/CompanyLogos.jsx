@@ -37,7 +37,7 @@ const CompanyLogos = ({ darkMode }) => {
   return (
     <div className="flex flex-col lg:flex-row w-full justify-between px-10 my-[100px]">
       <h1 className="w-full lg:w-[40%] xl:w-[20%] text-[48px]">
-        Brands We Worked with
+        Brands I&apos;ve Worked with
       </h1>
       <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {companyLogos.map((logo, index) => (
